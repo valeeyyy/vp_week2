@@ -118,7 +118,7 @@ fun myTravelView() {
             TextField(
                 value = q1,
                 onValueChange = { q1 = it },
-                modifier = Modifier.fillMaxWidth(),
+                modifier = Modifier.width(353.dp),
                 placeholder = {
                     Text("What did you enjoy most about your trip?")
                 },
@@ -135,7 +135,7 @@ fun myTravelView() {
             TextField(
                 value = q2,
                 onValueChange = { q2 = it },
-                modifier = Modifier.fillMaxWidth(),
+                modifier = Modifier.width(353.dp),
                 placeholder = {
                     Text("What was your favorite spot?")
                 },
@@ -152,7 +152,7 @@ fun myTravelView() {
             TextField(
                 value = q3,
                 onValueChange = { q3 = it },
-                modifier = Modifier.fillMaxWidth(),
+                modifier = Modifier.width(353.dp),
                 placeholder = {
                     Text("Anything else you'd like to add?")
                 },

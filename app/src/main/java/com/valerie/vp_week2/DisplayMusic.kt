@@ -86,6 +86,9 @@ fun displayMusicView() {
                     fontSize = 30.sp,
                     fontWeight = FontWeight.Bold
                 )
+
+                Spacer(modifier = Modifier.height(5.dp))
+
                 Text(
                     text = "Lany",
                     fontSize = 22.sp
@@ -162,7 +165,7 @@ fun displayMusicView() {
                 .padding(28.dp)
                 .verticalScroll(rememberScrollState())
         ) {
-            Text(text = "Lyrics", color = Color.White, fontSize = 22.sp)
+            Text(text = "Lyrics", color = Color.White, fontSize = 25.sp)
             Spacer(modifier = Modifier.height(15.dp))
             Text(
                 text = "When I first saw your face\n" +

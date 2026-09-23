@@ -18,7 +18,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            myTravelView()
+            displayMusicView()
         }
     }
 }
@@ -27,6 +27,6 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun GreetingPreview() {
     Vp_week2Theme {
-        myTravelView()
+        displayMusicView()
     }
 }
