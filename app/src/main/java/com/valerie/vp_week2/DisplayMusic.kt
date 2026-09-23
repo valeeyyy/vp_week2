@@ -29,11 +29,13 @@ import androidx.compose.ui.unit.sp
 
 @Composable
 fun displayMusicView() {
+
     Column(
         modifier = Modifier
             .fillMaxSize()
             .background(Color(0xFFA8D0E3))
             .padding(horizontal = 35.dp)
+            .verticalScroll(rememberScrollState())
     ) {
         Spacer(modifier = Modifier.height(50.dp))
 
@@ -154,10 +156,10 @@ fun displayMusicView() {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .weight(1f)
-                .clip(RoundedCornerShape(16.dp))
+                .height(400.dp)
+                .clip(RoundedCornerShape(30.dp))
                 .background(Color(0xFF5F8FA6))
-                .padding(16.dp)
+                .padding(28.dp)
                 .verticalScroll(rememberScrollState())
         ) {
             Text(text = "Lyrics", color = Color.White, fontSize = 22.sp)
@@ -186,7 +188,8 @@ fun displayMusicView() {
                         "I'm begging, baby, please\n" +
                         "For you to promise me",
                 color = Color.White,
-                fontSize = 20.sp
+                fontSize = 20.sp,
+                lineHeight = 30.sp
             )
         }
 
