@@ -1,4 +1,4 @@
-package com.valerie.vp_week2
+package com.valerie.vp_week2.Soal1
 
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.foundation.Image
@@ -26,6 +26,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.valerie.vp_week2.R
 
 @Composable
 fun displayMusicView() {

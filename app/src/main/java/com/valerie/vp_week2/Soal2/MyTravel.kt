@@ -1,11 +1,10 @@
-package com.valerie.vp_week2
+package com.valerie.vp_week2.Soal2
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -13,7 +12,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.Font
@@ -23,6 +21,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.valerie.vp_week2.R
 
 val PoppinsFont = FontFamily(
     Font(R.font.poppinsregular, FontWeight.Normal),
@@ -45,7 +44,7 @@ fun myTravelView() {
             modifier = Modifier
                 .align(Alignment.BottomCenter)
                 .fillMaxWidth()
-                .fillMaxHeight(0.60f)
+                .fillMaxHeight(0.63f)
                 .clip(
                     RoundedCornerShape(
                         topStart = 40.dp,
@@ -63,7 +62,9 @@ fun myTravelView() {
                 fontSize = 35.sp,
                 fontWeight = FontWeight.Bold,
                 fontFamily = PoppinsFont,
-                modifier = Modifier.fillMaxWidth(),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(top = 15.dp),
                 textAlign = TextAlign.Center
             )
 
@@ -118,9 +119,14 @@ fun myTravelView() {
             TextField(
                 value = q1,
                 onValueChange = { q1 = it },
-                modifier = Modifier.width(353.dp),
+                modifier = Modifier
+                    .width(350.dp)
+                    .height(60.dp),
                 placeholder = {
-                    Text("What did you enjoy most about your trip?")
+                    Text(
+                        "What did you enjoy most about your trip?",
+                        fontSize = 15.sp
+                    )
                 },
                 shape = RoundedCornerShape(10.dp),
                 colors = TextFieldDefaults.colors(
@@ -135,9 +141,14 @@ fun myTravelView() {
             TextField(
                 value = q2,
                 onValueChange = { q2 = it },
-                modifier = Modifier.width(353.dp),
+                modifier = Modifier
+                    .width(350.dp)
+                    .height(60.dp),
                 placeholder = {
-                    Text("What was your favorite spot?")
+                    Text(
+                        "What was your favorite spot?",
+                        fontSize = 15.sp
+                    )
                 },
                 shape = RoundedCornerShape(10.dp),
                 colors = TextFieldDefaults.colors(
@@ -152,9 +163,14 @@ fun myTravelView() {
             TextField(
                 value = q3,
                 onValueChange = { q3 = it },
-                modifier = Modifier.width(353.dp),
+                modifier = Modifier
+                    .width(350.dp)
+                    .height(60.dp),
                 placeholder = {
-                    Text("Anything else you'd like to add?")
+                    Text(
+                        "Anything else you'd like to add?",
+                        fontSize = 15.sp
+                    )
                 },
                 shape = RoundedCornerShape(10.dp),
                 colors = TextFieldDefaults.colors(

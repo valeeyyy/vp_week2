@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Vp_week2">
         <activity
-            android:name=".MainActivity"
+            android:name=".Soal1.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.Vp_week2"
