@@ -13,12 +13,15 @@ import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.Pause
 import androidx.compose.material.icons.filled.SkipNext
 import androidx.compose.material.icons.filled.SkipPrevious
+import androidx.compose.material.icons.filled.KeyboardArrowDown
+import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -30,32 +33,45 @@ fun displayMusicView() {
         modifier = Modifier
             .fillMaxSize()
             .background(Color(0xFFA8D0E3))
-            .padding(16.dp)
-
+            .padding(horizontal = 35.dp)
     ) {
         Spacer(modifier = Modifier.height(50.dp))
 
-        Text(
-            text = "Liked Songs",
-            fontWeight = FontWeight.Bold,
-            fontSize = 20.sp,
+        Row(
             modifier = Modifier.fillMaxWidth(),
-            textAlign = androidx.compose.ui.text.style.TextAlign.Center
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Icon(
+                imageVector = Icons.Default.KeyboardArrowDown,
+                contentDescription = "Back",
+                modifier = Modifier.size(35.dp)
+            )
+            Text(
+                text = "Liked Songs",
+                fontWeight = FontWeight.Bold,
+                fontSize = 20.sp
+            )
+            Icon(
+                imageVector = Icons.Default.MoreHoriz,
+                contentDescription = "More options",
+                modifier = Modifier.size(35.dp)
+            )
+        }
 
-        )
-
-        Spacer(modifier = Modifier.height(50.dp))
+        Spacer(modifier = Modifier.height(30.dp))
 
         Image(
             painter = painterResource(id = R.drawable.lany_cover),
             contentDescription = "Lany Cover",
+            contentScale = ContentScale.Crop,
             modifier = Modifier
                 .fillMaxWidth()
-                .height(280.dp)
+                .height(330.dp)
                 .clip(RoundedCornerShape(8.dp))
         )
 
-        Spacer(modifier = Modifier.height(16.dp))
+        Spacer(modifier = Modifier.height(30.dp))
 
         Row(
             modifier = Modifier.fillMaxWidth(),
@@ -73,12 +89,20 @@ fun displayMusicView() {
                     fontSize = 22.sp
                 )
             }
-            Icon(imageVector = Icons.Default.Favorite, contentDescription = "Like")
+            Icon(
+                imageVector = Icons.Default.Favorite,
+                contentDescription = "Like",
+                modifier = Modifier.size(35.dp)
+            )
         }
 
-        Spacer(modifier = Modifier.height(8.dp))
+        Spacer(modifier = Modifier.height(22.dp))
 
-        Divider(color = Color.Black, thickness = 4.dp)
+        Divider(
+            modifier = Modifier.fillMaxWidth(),
+            color = Color.Black,
+            thickness = 5.dp
+        )
 
         Spacer(modifier = Modifier.height(10.dp))
 
@@ -86,8 +110,8 @@ fun displayMusicView() {
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
-            Text(text = "0:12", fontSize = 12.sp)
-            Text(text = "-2:14", fontSize = 12.sp)
+            Text(text = "0:12", fontSize = 16.sp)
+            Text(text = "-2:14", fontSize = 16.sp)
         }
 
         Spacer(modifier = Modifier.height(16.dp))
@@ -97,11 +121,15 @@ fun displayMusicView() {
             horizontalArrangement = Arrangement.SpaceEvenly,
             verticalAlignment = Alignment.CenterVertically
         ) {
-            Icon(imageVector = Icons.Default.SkipPrevious, contentDescription = "Previous")
+            Icon(
+                imageVector = Icons.Default.SkipPrevious,
+                contentDescription = "Previous",
+                modifier = Modifier.size(52.dp)
+            )
 
             Box(
                 modifier = Modifier
-                    .size(56.dp)
+                    .size(70.dp)
                     .clip(RoundedCornerShape(50))
                     .background(Color.Black),
                 contentAlignment = Alignment.Center
@@ -109,14 +137,19 @@ fun displayMusicView() {
                 Icon(
                     imageVector = Icons.Default.Pause,
                     contentDescription = "Pause",
-                    tint = Color.White
+                    tint = Color.White,
+                    modifier = Modifier.size(35.dp)
                 )
             }
 
-            Icon(imageVector = Icons.Default.SkipNext, contentDescription = "Next")
+            Icon(
+                imageVector = Icons.Default.SkipNext,
+                contentDescription = "Next",
+                modifier = Modifier.size(52.dp)
+            )
         }
 
-        Spacer(modifier = Modifier.height(16.dp))
+        Spacer(modifier = Modifier.height(40.dp))
 
         Column(
             modifier = Modifier
@@ -143,7 +176,7 @@ fun displayMusicView() {
                         "For you to promise me you would be my last forever\n\n" +
                         "Flowers bloom, then they die\n" +
                         "\"Hellos\" end in \"goodbyes\"\n" +
-                        "You nevеr get the same colors in thе sky\n" +
+                        "You never get the same colors in the sky\n" +
                         "Some love just passin' through\n" +
                         "Some love one night or two\n" +
                         "But some loves you just know when you do, and I knew\n\n" +
@@ -156,6 +189,8 @@ fun displayMusicView() {
                 fontSize = 20.sp
             )
         }
+
+        Spacer(modifier = Modifier.height(16.dp))
     }
 }
 
