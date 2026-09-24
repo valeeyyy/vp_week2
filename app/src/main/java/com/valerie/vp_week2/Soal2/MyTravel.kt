@@ -44,7 +44,7 @@ fun myTravelView() {
             modifier = Modifier
                 .align(Alignment.BottomCenter)
                 .fillMaxWidth()
-                .fillMaxHeight(0.63f)
+                .fillMaxHeight(0.67f)
                 .clip(
                     RoundedCornerShape(
                         topStart = 40.dp,
@@ -120,12 +120,11 @@ fun myTravelView() {
                 value = q1,
                 onValueChange = { q1 = it },
                 modifier = Modifier
-                    .width(350.dp)
-                    .height(60.dp),
+                    .width(330.dp),
                 placeholder = {
                     Text(
                         "What did you enjoy most about your trip?",
-                        fontSize = 15.sp
+                        fontSize = 13.sp
                     )
                 },
                 shape = RoundedCornerShape(10.dp),
@@ -142,12 +141,11 @@ fun myTravelView() {
                 value = q2,
                 onValueChange = { q2 = it },
                 modifier = Modifier
-                    .width(350.dp)
-                    .height(60.dp),
+                    .width(330.dp),
                 placeholder = {
                     Text(
                         "What was your favorite spot?",
-                        fontSize = 15.sp
+                        fontSize = 13.sp
                     )
                 },
                 shape = RoundedCornerShape(10.dp),
@@ -164,12 +162,11 @@ fun myTravelView() {
                 value = q3,
                 onValueChange = { q3 = it },
                 modifier = Modifier
-                    .width(350.dp)
-                    .height(60.dp),
+                    .width(330.dp),
                 placeholder = {
                     Text(
                         "Anything else you'd like to add?",
-                        fontSize = 15.sp
+                        fontSize = 13.sp
                     )
                 },
                 shape = RoundedCornerShape(10.dp),
