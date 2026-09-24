@@ -107,9 +107,9 @@ fun myTravelView() {
                 Text(
                     text = "5.0",
                     color = Color(0xFFFFCF58),
-                    fontFamily = PoppinsFont,
-                    fontWeight = FontWeight.Medium,
                     fontSize = 28.sp,
+                    fontWeight = FontWeight.Medium,
+                    fontFamily = PoppinsFont
                 )
             }
 
